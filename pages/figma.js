@@ -2,7 +2,6 @@
 import Link from "next/link";
 import Main from "../components/Figma/main";
 
-import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import swiper styles
 import "swiper/css";
