@@ -222,10 +222,12 @@ body {
 .image-sizer {
   border: 2px solid transparent;
   transition: border-color .3s, opacity .3s;
+  /* transition: all 0.3s; */
 }
 
 .image-sizer:hover .image3 {
   z-index: -1;
+  transition: 0.3s;
 }
 
 .text-image {
