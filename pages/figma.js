@@ -1470,6 +1470,41 @@
 //   );
 // }
 
+import { Swiper, SwiperSlide } from "swiper/react";
+// import swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+// import "swiper/css/pagination";
+import "swiper/css/free-mode";
+
+import { Pagination, Navigation, FreeMode } from "swiper";
+
 export default function Figma() {
-  return <>This is figma page</>;
+  return (
+    <>
+      <p>This is figma page</p>
+      <Swiper
+        slidesPerView={"auto"}
+        loop={true}
+        freeMode={true}
+        spaceBetween={0}
+        centeredSlides={true}
+        // pagination={{
+        //   clickable: true,
+        // }}
+        navigation={{
+          nextEl: ".button-next-slide",
+          prevEl: ".button-prev-slide",
+        }}
+        modules={[Pagination, Navigation, FreeMode]}
+        className="mySwiper"
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+      </Swiper>
+    </>
+  );
 }
