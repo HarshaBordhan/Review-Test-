@@ -1468,18 +1468,14 @@
 // }
 
 import { Swiper, SwiperSlide } from "swiper/react";
-// import swiper styles
-import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/free-mode";
 
-// import { Navigation, FreeMode } from "swiper";
+import "swiper/css";
 
 export default function Figma() {
   return (
     <>
       <h1>Figma slider</h1>
-      <Swiper slidesPerView={3} spaceBetween={30}>
+      <Swiper slidesPerView={3} className="mySwiper">
         <SwiperSlide>Slide 1</SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
