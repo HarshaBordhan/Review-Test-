@@ -47,6 +47,18 @@ export default function Slider() {
     btnLeft.addEventListener("click", prevSlide);
     btnRight.addEventListener("click", nextSlide);
 
+    // Dragging
+    const container = document.querySelector(".sliders");
+
+    let isDragging = false;
+    const dragging = (e) => {
+      if (!isDragging) return;
+      container.scrollLeft -= e.movementX;
+    };
+
+    container.addEventListener("mousedown", () => (isDragging = true));
+    container.addEventListener("mousemove", () => dragging);
+
     return () => {
       btnLeft.removeEventListener("click", prevSlide);
       btnRight.removeEventListener("click", nextSlide);
@@ -57,7 +69,7 @@ export default function Slider() {
     <section className="w-full h-screen">
       <div className="max-w-[1440px] h-full mx-auto relative">
         <div className="flex flex-col justify-center h-full">
-          <div className="sliders flex flex-row w-[480px] mx-auto my-0 h-32 overflow-hidden relative">
+          <div className="sliders flex flex-row w-[480px] mx-auto my-0 h-32 overflow-x-hidden relative cursor-pointer">
             <div className="slides w-full border rounded-lg bg-slate-100 text-center m-auto absolute">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
               accusamus sapiente laudantium? Numquam maxime consequuntur
