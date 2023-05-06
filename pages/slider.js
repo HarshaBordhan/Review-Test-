@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export default function Slider() {
   useEffect(() => {
-    // const slider = () => {
+    // Carousel Slider
     const slides = document.querySelectorAll(".slides");
     const btnLeft = document.querySelector(".prev-btn");
     const btnRight = document.querySelector(".next-btn");
@@ -46,9 +46,7 @@ export default function Slider() {
     // Event handlers
     btnLeft.addEventListener("click", prevSlide);
     btnRight.addEventListener("click", nextSlide);
-    // };
 
-    // slider();
     return () => {
       btnLeft.removeEventListener("click", prevSlide);
       btnRight.removeEventListener("click", nextSlide);
