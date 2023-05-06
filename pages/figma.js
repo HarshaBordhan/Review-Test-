@@ -2,8 +2,8 @@
 import Link from "next/link";
 import Main from "../components/Figma/main";
 
-{
-  /*
+import React, { useEffect, useRef, useState } from "react";
+/*
 import { Swiper, SwiperSlide } from "swiper/react";
 // import swiper styles
 import "swiper/css";
@@ -12,10 +12,12 @@ import "swiper/css/free-mode";
 
 import { Navigation, FreeMode } from "swiper";
 */
-}
+
 import Photos from "../components/Figma/photos";
 
 export default function Figma() {
+  useEffect(() => {}, []);
+
   return (
     <>
       <header className="navbar w-full bg-[#ffc700] left-0 fixed top-0 z-[5]">
@@ -105,15 +107,19 @@ export default function Figma() {
                   freeMode={true}
                   spaceBetween={0}
                   centeredSlides={true}
+                  autoHeight={true}
                   navigation={{
                     nextEl: ".button-next-slide",
                     prevEl: ".button-prev-slide",
                   }}
                   modules={[Navigation, FreeMode]}
-                  className="mySwiper"
+                  className="mySwiper flex justify-between"
                 > */}
                 {/* <SwiperSlide> */}
-                <Main hoverText="Version history coach jacket">
+                <Main
+                  hoverText="Version history coach jacket"
+                  className="slide"
+                >
                   <svg
                     className="svg-cutout"
                     width={1124}
@@ -150,7 +156,7 @@ export default function Figma() {
                 {/* </SwiperSlide> */}
 
                 {/* <SwiperSlide> */}
-                <Main hoverText="Gridlock washi tape">
+                <Main hoverText="Gridlock washi tape" className="slide">
                   <svg
                     className="svg-cutout"
                     width={658}
@@ -189,7 +195,7 @@ export default function Figma() {
                 {/* </SwiperSlide> */}
 
                 {/* <SwiperSlide> */}
-                <Main hoverText="Tidy up tee">
+                <Main hoverText="Tidy up tee" className="slide">
                   <svg
                     className="svg-cutout"
                     width={650}
@@ -226,7 +232,7 @@ export default function Figma() {
                 {/* </SwiperSlide> */}
 
                 {/* <SwiperSlide> */}
-                <Main hoverText="Design in bloom tee">
+                <Main hoverText="Design in bloom tee" className="slide">
                   <svg
                     className="svg-cutout"
                     width={1124}
@@ -263,7 +269,7 @@ export default function Figma() {
                 {/* </SwiperSlide> */}
 
                 {/* <SwiperSlide> */}
-                <Main hoverText="Dress code hat">
+                <Main hoverText="Dress code hat" className="slide">
                   <svg
                     className="svg-cutout"
                     width={650}
@@ -300,7 +306,7 @@ export default function Figma() {
                 {/* </SwiperSlide> */}
 
                 {/* <SwiperSlide> */}
-                <Main hoverText="Shape up tee">
+                <Main hoverText="Shape up tee" className="slide">
                   <svg
                     className="svg-cutout"
                     width={658}
@@ -339,7 +345,7 @@ export default function Figma() {
                 {/* </SwiperSlide> */}
 
                 {/* <SwiperSlide> */}
-                <Main hoverText="Toolkit pin">
+                <Main hoverText="Toolkit pin" className="slide">
                   <svg
                     className="svg-cutout"
                     width={650}
@@ -380,7 +386,7 @@ export default function Figma() {
                 {/* </SwiperSlide> */}
 
                 {/* <SwiperSlide> */}
-                <Main hoverText="Band together socks">
+                <Main hoverText="Band together socks" className="slide">
                   <svg
                     className="svg-cutout"
                     width={650}
@@ -417,7 +423,7 @@ export default function Figma() {
                 {/* </SwiperSlide> */}
 
                 {/* <SwiperSlide> */}
-                <Main hoverText="Framework tee">
+                <Main hoverText="Framework tee" className="slide">
                   <svg
                     className="svg-cutout"
                     width={650}
@@ -454,7 +460,7 @@ export default function Figma() {
                 {/* </SwiperSlide> */}
 
                 {/* <SwiperSlide> */}
-                <Main hoverText="Design in bloom tee">
+                <Main hoverText="Design in bloom tee" className="slide">
                   <svg
                     className="svg-cutout"
                     width={658}

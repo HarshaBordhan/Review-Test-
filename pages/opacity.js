@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 
 export default function Opacity() {
-  /* First try
+  /*
+  // First try
   useEffect(() => {
     window.addEventListener(scroll, () => {
       const sectionOpa = document.querySelector(".opa");
