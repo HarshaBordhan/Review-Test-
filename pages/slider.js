@@ -62,6 +62,9 @@ export default function Slider() {
     return () => {
       btnLeft.removeEventListener("click", prevSlide);
       btnRight.removeEventListener("click", nextSlide);
+
+      container.removeEventListener("mousedown", () => (isDragging = true));
+      container.removeEventListener("mousemove", () => dragging);
     };
   }, []);
 
