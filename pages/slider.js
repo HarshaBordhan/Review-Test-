@@ -58,8 +58,34 @@ export default function Slider() {
   return (
     <section className="w-full h-screen">
       <div className="max-w-[1440px] h-full mx-auto relative">
-        <div className="flex flex-col justify-center">
-          <div className="sliders flex flex-row overflow-hidden relative max-w-[100rem] mx-auto my-auto h-full"></div>
+        <div className="flex flex-col justify-center h-full">
+          <div className="sliders flex flex-row w-[480px] mx-auto my-0 h-32 overflow-hidden relative">
+            <div className="slides w-full border rounded-lg bg-slate-100 text-center m-auto absolute">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              accusamus sapiente laudantium? Numquam maxime consequuntur
+              inventore fuga maiores ipsum magni quaerat possimus officia?
+            </div>
+            <div className="slides w-full border rounded-lg bg-slate-100 text-center m-auto absolute">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              accusamus sapiente laudantium? Numquam maxime consequuntur
+              inventore fuga maiores ipsum magni quaerat possimus officia?
+            </div>
+            <div className="slides w-full border rounded-lg bg-slate-100 text-center m-auto absolute">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              accusamus sapiente laudantium? Numquam maxime consequuntur
+              inventore fuga maiores ipsum magni quaerat possimus officia?
+            </div>
+            <div className="slides w-full border rounded-lg bg-slate-100 text-center m-auto absolute">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              accusamus sapiente laudantium? Numquam maxime consequuntur
+              inventore fuga maiores ipsum magni quaerat possimus officia?
+            </div>
+            <div className="slides w-full border rounded-lg bg-slate-100 text-center m-auto absolute">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              accusamus sapiente laudantium? Numquam maxime consequuntur
+              inventore fuga maiores ipsum magni quaerat possimus officia?
+            </div>
+          </div>
         </div>
         <div className="buttons">
           {/* Left button */}
