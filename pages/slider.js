@@ -65,22 +65,22 @@ export default function Slider() {
               accusamus sapiente laudantium? Numquam maxime consequuntur
               inventore fuga maiores ipsum magni quaerat possimus officia?
             </div>
-            <div className="slides w-full border rounded-lg bg-slate-100 text-center m-auto absolute">
+            <div className="slides w-full border rounded-lg bg-lime-100 text-center m-auto absolute">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
               accusamus sapiente laudantium? Numquam maxime consequuntur
               inventore fuga maiores ipsum magni quaerat possimus officia?
             </div>
-            <div className="slides w-full border rounded-lg bg-slate-100 text-center m-auto absolute">
+            <div className="slides w-full border rounded-lg bg-red-100 text-center m-auto absolute">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
               accusamus sapiente laudantium? Numquam maxime consequuntur
               inventore fuga maiores ipsum magni quaerat possimus officia?
             </div>
-            <div className="slides w-full border rounded-lg bg-slate-100 text-center m-auto absolute">
+            <div className="slides w-full border rounded-lg bg-purple-100 text-center m-auto absolute">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
               accusamus sapiente laudantium? Numquam maxime consequuntur
               inventore fuga maiores ipsum magni quaerat possimus officia?
             </div>
-            <div className="slides w-full border rounded-lg bg-slate-100 text-center m-auto absolute">
+            <div className="slides w-full border rounded-lg bg-blue-100 text-center m-auto absolute">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
               accusamus sapiente laudantium? Numquam maxime consequuntur
               inventore fuga maiores ipsum magni quaerat possimus officia?
