@@ -30,7 +30,7 @@ export default function Slider() {
     // Previous slide
     const prevSlide = () => {
       if (curSlide === 0) {
-        curSlide === 0;
+        curSlide = maxSlide - 1;
       } else {
         curSlide--;
       }
