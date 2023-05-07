@@ -280,3 +280,7 @@ cursor: grab;
   user-select: none;
   pointer-events: none;
 }
+
+.slides{
+  transition: transform 1s; 
+}
