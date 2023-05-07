@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import React from "react";
+
+const headerRef = React.createRef();
 
 export default function Opacity() {
   /*
@@ -19,6 +22,7 @@ export default function Opacity() {
   }, []);
 */
 
+  /*
   // Second try
   const [opacity, setOpacity] = useState(1);
 
@@ -37,11 +41,40 @@ export default function Opacity() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+*/
+
+  const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+    const headerHeight = headerRef.current.clientHeight;
+    const range = 200;
+    const offset = headerHeight / 2;
+
+    const didScrollPage = (e) => {
+      let calc = 1 - (window.scrollY - offset + range) / range;
+
+      if (calc > 1) {
+        calc = 1;
+      } else if (calc < 0) {
+        calc = 0;
+      }
+
+      setOpacity(calc);
+    };
+
+    window.addEventListener("scroll", didScrollPage);
+
+    return () => {
+      window.removeEventListener("keydown", didScrollPage);
+    };
+  }, []);
 
   return (
     <div className="bg-black text-[#fff] relative h-[200vh]">
       <div
-        className={`w-screen h-screen mx-auto flex flex-col justify-center items-center opa fixed top-0 ${opacity}`}
+        className={`w-screen h-screen mx-auto flex flex-col justify-center items-center opa fixed top-0`}
+        ref={headerRef}
+        style={{ opacity: opacity }}
       >
         <p className="max-w-xl">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut accusamus
