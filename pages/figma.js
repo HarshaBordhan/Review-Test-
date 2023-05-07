@@ -20,12 +20,31 @@ export default function Figma() {
     const carousel = document.querySelector(".carousel");
     const arrowButtons = document.querySelectorAll(".button");
 
+    // const goToSlide = (scrollValue) => {
+    //   let maxScrollableWidth = carousel.scrollWidth - carousel.clientWidth;
+    //   arrowButtons[0].parentElement.style.display =
+    //     scrollValue <= 0 ? "none" : "block";
+    //   arrowButtons[1].parentElement.style.display =
+    //     maxScrollableWidth - scrollValue <= 1 ? "none" : "block";
+    // };
+
+    arrowButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        // let scrollWidth = (carousel.scrollLeft +=
+        //   btn.id === "left" ? -340 : 340);
+        // goToSlide(scrollWidth);
+
+        carousel.scrollLeft += btn.id === "left" ? -340 : 340;
+      });
+    });
+
     let isDragging = false;
 
     const dragging = (e) => {
       if (!isDragging) return;
       carousel.classList.add("dragging");
       carousel.scrollLeft -= e.movementX;
+      // goToSlide(carousel.scrollLeft);
     };
 
     const dragStop = () => {
@@ -528,7 +547,10 @@ export default function Figma() {
 
               <div className="buttons">
                 {/* <div className="button-prev-slide group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer"> */}
-                <div className="button button-prev-slide opacity-0 hover:opacity-100">
+                <div
+                  className="button button-prev-slide opacity-0 hover:opacity-100"
+                  id="left"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
