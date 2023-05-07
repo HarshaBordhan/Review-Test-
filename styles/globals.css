@@ -89,7 +89,9 @@ body {
 }
 
 .carousel {
-  transform: translate3d(0%, 0px, 0px);
+  /* transform: translate3d(0%, 0px, 0px); */
+  transform: translateX(0%);
+  transition: transform 1s;
 }
 
 .svg-cutout {
@@ -269,6 +271,12 @@ body {
   height: 52px;
 }
 
-.slides{
-  transition: transform 1s;
+.carousel.dragging {
+scroll-behavior: auto;
+cursor: grab;
+}
+
+.carousel.dragging .slide{
+  user-select: none;
+  pointer-events: none;
 }

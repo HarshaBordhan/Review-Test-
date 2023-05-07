@@ -56,8 +56,13 @@ export default function Slider() {
       container.scrollLeft -= e.movementX;
     };
 
+    const dragStop = () => {
+      isDragging = false;
+    };
+
     container.addEventListener("mousedown", () => (isDragging = true));
     container.addEventListener("mousemove", () => dragging);
+    document.addEventListener("mouseup", () => dragStop);
 
     return () => {
       btnLeft.removeEventListener("click", prevSlide);
@@ -65,6 +70,7 @@ export default function Slider() {
 
       container.removeEventListener("mousedown", () => (isDragging = true));
       container.removeEventListener("mousemove", () => dragging);
+      document.removeEventListener("mouseup", () => dragStop);
     };
   }, []);
 

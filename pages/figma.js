@@ -16,7 +16,33 @@ import { Navigation, FreeMode } from "swiper";
 import Photos from "../components/Figma/photos";
 
 export default function Figma() {
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const carousel = document.querySelector(".carousel");
+    const arrowButtons = document.querySelectorAll(".button");
+
+    let isDragging = false;
+
+    const dragging = (e) => {
+      if (!isDragging) return;
+      carousel.classList.add("dragging");
+      carousel.scrollLeft -= e.movementX;
+    };
+
+    const dragStop = () => {
+      isDragging = false;
+      carousel.classList.remove("dragging");
+    };
+
+    carousel.addEventListener("mousedown", () => (isDragging = true));
+    carousel.addEventListener("mousemove", dragging);
+    document.addEventListener("mouseup", dragStop);
+
+    return () => {
+      carousel.removeEventListener("mousedown", () => (isDragging = true));
+      carousel.removeEventListener("mousemove", dragging);
+      document.removeEventListener("mouseup", dragStop);
+    };
+  }, []);
 
   return (
     <>
@@ -97,8 +123,8 @@ export default function Figma() {
         <section className="w-full">
           <div className="bg-[#ffc700] border-b-4 border-black relative pt-[82px] pb-[20px]">
             {/* <div className=""> */}
-            <div className="overflow-hidden w-full">
-              <div className="flex w-full mx-auto my-0 carousel">
+            <div className="overflow-hidden relative w-full slide-container">
+              <div className="flex w-full mx-auto my-0 overflow-x-hidden scroll-smooth carousel">
                 {/* <div className="w-full mx-auto my-0 carousel"> */}
                 {/* <div className=""> */}
                 {/* <Swiper
@@ -502,7 +528,7 @@ export default function Figma() {
 
               <div className="buttons">
                 {/* <div className="button-prev-slide group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer"> */}
-                <div className="button-prev-slide opacity-0 hover:opacity-100">
+                <div className="button button-prev-slide opacity-0 hover:opacity-100">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -520,7 +546,7 @@ export default function Figma() {
                 </div>
 
                 {/* <div className="button-next-slide group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer"> */}
-                <div className="button-next-slide opacity-0 hover:opacity-100">
+                <div className="button button-next-slide opacity-0 hover:opacity-100">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
