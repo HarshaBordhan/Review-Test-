@@ -4,45 +4,6 @@ import React from "react";
 const headerRef = React.createRef();
 
 export default function Opacity() {
-  /*
-  // First try
-  useEffect(() => {
-    window.addEventListener(scroll, () => {
-      const sectionOpa = document.querySelector(".opa");
-
-      const mainOpa = window.scrollY / 1000;
-      console.log(mainOpa);
-      if (mainOpa === 0) {
-        sectionOpa.style.opacity = 1;
-      }
-      if (mainOpa > 0) {
-        sectionOpa.style.opacity = `${1 - mainOpa}`;
-      }
-    });
-  }, []);
-*/
-
-  /*
-  // Second try
-  const [opacity, setOpacity] = useState(1);
-
-  useEffect(() => {
-    function handleScroll() {
-      const scrollTop =
-        document.documentElement.scrollTop || document.body.scrollTop;
-      const height = window.innerHeight;
-      const newOpacity = 1 - scrollTop / height;
-      setOpacity(newOpacity);
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-*/
-
   const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
@@ -51,7 +12,7 @@ export default function Opacity() {
     const offset = headerHeight / 2;
 
     const didScrollPage = (e) => {
-      let calc = 1 - (window.scrollY - offset + range) / range;
+      let calc = 1 - (window.scrollY - offset + range) / (range * 4);
 
       if (calc > 1) {
         calc = 1;
