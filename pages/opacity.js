@@ -11,7 +11,7 @@ export default function Opacity() {
     const offset = headerHeight / 2;
 
     const didScrollPage = () => {
-      const count = (window.scrollY - offset + range) / range;
+      const count = (window.scrollY - offset + range) / (range * 2);
       let calc = 1 - count;
 
       if (calc >= 1) {
