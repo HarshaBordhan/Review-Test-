@@ -35,7 +35,7 @@ export default function Opacity() {
   return (
     <div className="bg-black text-[#fff] relative h-[200vh]">
       <div
-        className={`w-screen h-screen mx-auto flex flex-col justify-center items-center opa fixed top-0`}
+        className={`w-screen h-screen mx-auto flex flex-col justify-center items-center fixed top-0`}
         ref={headerRef}
         style={{ opacity: opacity }}
       >
@@ -45,13 +45,17 @@ export default function Opacity() {
           maiores ipsum magni quaerat possimus officia?
         </p>
       </div>
-      <div className="w-screen h-screen mx-auto flex flex-col justify-center items-center fixed top-0">
+      {/* <div
+        className="w-screen h-screen mx-auto flex flex-col justify-center items-center fixed top-0"
+        ref={headerRef}
+        style={{ opacity: opacity }}
+      >
         <p className="max-w-xl">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut accusamus
           sapiente laudantium? Numquam maxime consequuntur inventore fuga
           maiores ipsum magni quaerat possimus officia?
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
