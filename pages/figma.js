@@ -27,7 +27,7 @@ export default function Figma() {
 
         carousel.scrollLeft += btn.id === "left" ? -340 : 340;
 
-        // console.log(btn.id);
+        console.log(btn.id);
       });
     });
 
