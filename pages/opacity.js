@@ -20,7 +20,7 @@ export default function Opacity() {
         calc = 0;
       }
 
-      console.log(count);
+      // console.log(count);
       // console.log(calc);
       setOpacity(calc);
     };
