@@ -1,18 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import React from "react";
 
-const headerRef = React.createRef();
-
 export default function Opacity() {
+  const headerRef = useRef();
   const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
     const headerHeight = headerRef.current.clientHeight;
-    const range = 200;
+    const range = 300;
     const offset = headerHeight / 2;
 
-    const didScrollPage = (e) => {
-      let calc = 1 - (window.scrollY - offset + range) / (range * 4);
+    const didScrollPage = () => {
+      let calc = 1 - (window.scrollY - offset + range) / range;
 
       if (calc > 1) {
         calc = 1;
