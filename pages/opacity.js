@@ -13,13 +13,13 @@ export default function Opacity() {
     const didScrollPage = () => {
       let calc = 1 - (window.scrollY - offset + range) / range;
 
-      if (calc > 1) {
+      if (calc >= 1) {
         calc = 1;
-      } else if (calc < 0) {
+      } else if (calc <= 0) {
         calc = 0;
       }
 
-      console.log(calc)
+      console.log(calc);
       setOpacity(calc);
     };
 
