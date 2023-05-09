@@ -19,6 +19,7 @@ export default function Opacity() {
         calc = 0;
       }
 
+      console.log(calc)
       setOpacity(calc);
     };
 
