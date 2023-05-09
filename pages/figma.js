@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Main from "../components/Figma/main";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 
 import Photos from "../components/Figma/photos";
 
