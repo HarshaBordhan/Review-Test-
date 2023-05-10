@@ -288,3 +288,59 @@ cursor: grab;
 
 
 /*** opacity ***/
+
+/*** motion ***/
+body{
+--black: #000000;
+  --ash-black: #222;
+  --white: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue: #1300ff;
+  --dusk: #6600ff;
+  --purple: #9900ff;
+  --pink: #ff0066;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
+
+  --background: var(--white);
+  --accent: var(--blue);
+}
+ 
+
+#root{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.refresh{
+  /* padding: 5px; */
+  position: absolute;
+  border: 1px dotted var(--accent);
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer
+}
+
+.refresh path{
+  fill: var(--accent)
+}
+
+.box{width: 200px;
+height: 200px;
+border-radius: 50%;
+background: var(--accent);
+}
