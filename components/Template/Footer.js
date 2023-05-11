@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer({ title, url }) {
   return (
-    <footer>
+    <div className="logo-footer">
       <Link href="https://www.framer.com/motion/" legacyBehavior>
         <a target="_blank" rel="noreferrer">
           <Logo />
@@ -14,6 +14,6 @@ export default function Footer({ title, url }) {
           <code>{title}</code>
         </a>
       </Link>
-    </footer>
+    </div>
   );
 }

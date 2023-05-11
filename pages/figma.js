@@ -1218,7 +1218,7 @@ export default function Figma() {
         </section>
       </main>
 
-      <div className="bg-[rgb(242,78,30)] pt-[60px]">
+      <footer className="bg-[rgb(242,78,30)] pt-[60px]">
         <div>
           <div className="grid grid-cols-[auto,2fr,1fr,auto] max-w-[1280px] mx-auto px-3 gap-x-16 gap-y-10">
             <div className="row-span-2">
@@ -1637,7 +1637,7 @@ export default function Figma() {
             </div>
           </div>
         </div>
-      </div>
+      </footer>
     </>
   );
 }
