@@ -1,4 +1,3 @@
-/*
 import Refresh from "@/components/Template/Refresh";
 import App from "@/components/Template/App";
 import Footer from "@/components/Template/Footer";
@@ -20,4 +19,3 @@ export default function Motion() {
     </>
   );
 }
-*/

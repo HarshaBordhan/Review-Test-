@@ -11,7 +11,7 @@ export default function App() {
   );
 }
 */
-
+/*
 import { motion } from "framer-motion";
 
 export default function App() {
@@ -33,3 +33,4 @@ export default function App() {
     />
   );
 }
+*/
