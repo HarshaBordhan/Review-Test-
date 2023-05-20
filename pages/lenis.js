@@ -4,9 +4,10 @@ export default function Lenis() {
       <div>Auto Scroll</div>
       <div>
         <h2>Smoth Scroll</h2>
-        <div>This is lenis scroll</div>
-        <div>This is lenis scroll</div>
-        <div>This is lenis scroll</div>
+        <p>
+          This is lenis scroll. Lenis is a open source library built to
+          standarize
+        </p>
       </div>
     </>
   );
