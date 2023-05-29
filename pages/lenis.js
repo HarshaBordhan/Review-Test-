@@ -8,6 +8,10 @@ export default function Lenis() {
           This is lenis scroll. Lenis is a open source library built to
           standarize
         </p>
+        <p>
+          This is lenis scroll. Lenis is a open source library built to
+          standarize
+        </p>
       </div>
     </>
   );
