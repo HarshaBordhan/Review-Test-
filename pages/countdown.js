@@ -7,6 +7,10 @@ export default function Countdown() {
     let mins;
     let sec;
 
+    const pad2Digit = function (num) {
+      return num.toString().padStart(2, "0");
+    };
+
     const updateTime = function () {
       const dest = new Date("June 7, 2023 10:15:00").getTime();
       const now = new Date().getTime();
@@ -50,9 +54,13 @@ export default function Countdown() {
       hoursNow = nowTime.getHours();
 
       // console.log(secNow, minsNow, hoursNow);
-      document.querySelector(".currentHours").innerText = hoursNow;
-      document.querySelector(".currentMins").innerText = minsNow;
-      document.querySelector(".currentSec").innerText = secNow;
+      document.querySelector(".currentHours").innerText = `${pad2Digit(
+        hoursNow
+      )}`;
+      document.querySelector(".currentMins").innerText = `${pad2Digit(
+        minsNow
+      )}`;
+      document.querySelector(".currentSec").innerText = `${pad2Digit(secNow)}`;
     };
 
     const interval = setInterval(updateTime, 1000);
@@ -74,7 +82,7 @@ export default function Countdown() {
         </section>
         <div className="mt-5">
           <h2>The current time</h2>
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-row gap-2">
             <span className="currentHours"></span>:
             <span className="currentMins"></span>:
             <span className="currentSec"></span>
