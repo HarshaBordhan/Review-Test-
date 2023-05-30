@@ -73,16 +73,16 @@ export default function Countdown() {
   return (
     <>
       <main className="w-screen h-screen bg-black text-white">
-        <section className="max-w-[640px] mx-auto my-0">
+        <section className="max-w-[640px] mx-auto my-0 flex flex-col justify-center items-center">
           <h2>Countdown to Extinction </h2>
           <div className="flex flex-row gap-4">
             <span className="days"></span>:<span className="hours"></span>:
             <span className="mins"></span>:<span className="secs"></span>
           </div>
         </section>
-        <div className="mt-5">
-          <h2>The current time</h2>
-          <div className="flex flex-row gap-2">
+        <div className="mt-5 absolute bottom-4 right-4 flex gap-4">
+          {/* <h2>The current time</h2> */}
+          <div className="flex flex-row gap-1">
             <span className="currentHours"></span>:
             <span className="currentMins"></span>:
             <span className="currentSec"></span>
