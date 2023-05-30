@@ -74,9 +74,9 @@ export default function Countdown() {
   return (
     <>
       <main className="w-screen h-screen bg-black text-white">
-        <section className="max-w-[640px] mx-auto my-0 flex flex-col justify-center items-center">
-          <h2>Countdown to Extinction </h2>
-          <div className="flex flex-row gap-4">
+        <section className="w-full h-full mx-auto my-0 flex flex-col justify-center items-center gap-2">
+          <h2 className="text-3xl">Countdown to Extinction </h2>
+          <div className="flex flex-row gap-4 text-2xl">
             <span className="days"></span>:<span className="hours"></span>:
             <span className="mins"></span>:<span className="secs"></span>
           </div>
