@@ -38,6 +38,21 @@ export default function Countdown() {
       document.querySelector(".hours").innerText = hours + "h";
       document.querySelector(".mins").innerText = mins + "m";
       document.querySelector(".secs").innerText = sec + "s";
+
+      // DATES AND TIMES now
+      let hoursNow;
+      let minsNow;
+      let secNow;
+
+      const nowTime = new Date();
+      secNow = nowTime.getSeconds();
+      minsNow = nowTime.getMinutes();
+      hoursNow = nowTime.getHours();
+
+      // console.log(secNow, minsNow, hoursNow);
+      document.querySelector(".currentHours").innerText = hoursNow;
+      document.querySelector(".currentMins").innerText = minsNow;
+      document.querySelector(".currentSec").innerText = secNow;
     };
 
     const interval = setInterval(updateTime, 1000);
