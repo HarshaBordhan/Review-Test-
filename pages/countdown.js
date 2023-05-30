@@ -7,6 +7,10 @@ export default function Countdown() {
     let mins;
     let sec;
 
+    let hoursNow;
+    let minsNow;
+    let secNow;
+
     const pad2Digit = function (num) {
       return num.toString().padStart(2, "0");
     };
@@ -44,9 +48,6 @@ export default function Countdown() {
       document.querySelector(".secs").innerText = sec + "s";
 
       // DATES AND TIMES now
-      let hoursNow;
-      let minsNow;
-      let secNow;
 
       const nowTime = new Date();
       secNow = nowTime.getSeconds();
