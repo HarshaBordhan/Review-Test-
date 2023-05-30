@@ -73,7 +73,7 @@ export default function Countdown() {
   return (
     <>
       <main className="w-screen h-screen bg-black text-white">
-        <section>
+        <section className="max-w-[640px] mx-auto my-0">
           <h2>Countdown to Extinction </h2>
           <div className="flex flex-row gap-4">
             <span className="days"></span>:<span className="hours"></span>:
