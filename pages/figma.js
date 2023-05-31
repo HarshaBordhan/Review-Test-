@@ -10,7 +10,7 @@ export default function Figma() {
   useEffect(() => {
     const carousel = document.querySelector(".carousel");
     const arrowButtons = document.querySelectorAll(".button");
-    const slide = document.querySelectorAll(".slide");
+    const slide = [...document.querySelectorAll(".slide")];
     let clones = [];
 
     // const goToSlide = (scrollValue) => {
@@ -28,6 +28,14 @@ export default function Figma() {
       clones.push(clone);
     });
 
+    function getClonesWidth() {
+      let width = 0;
+      clones.forEach((clone) => {
+        width += clone.offsetWidth;
+      });
+      return width;
+    }
+
     arrowButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
         // let scrollWidth = (carousel.scrollLeft +=
@@ -35,7 +43,7 @@ export default function Figma() {
         // goToSlide(scrollWidth);
 
         carousel.scrollLeft += btn.id === "left" ? -340 : 340;
-
+        getClonesWidth();
         // console.log(btn.id);
       });
     });
