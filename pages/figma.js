@@ -12,8 +12,6 @@ export default function Figma() {
     const arrowButtons = document.querySelectorAll(".button");
     const slide = document.querySelectorAll(".slide");
 
-    let index = 1;
-
     // const goToSlide = (scrollValue) => {
     //   let maxScrollableWidth = carousel.scrollWidth - carousel.clientWidth;
     //   arrowButtons[0].parentElement.style.display =
@@ -22,14 +20,14 @@ export default function Figma() {
     //     maxScrollableWidth - scrollValue <= 1 ? "none" : "block";
     // };
 
-    const firstClone = slide[0].cloneNode(true);
-    const lastClone = slide[slide.length - 1].cloneNode(true);
+    // const firstClone = slide[0].cloneNode(true);
+    // const lastClone = slide[slide.length - 1].cloneNode(true);
 
-    firstClone.id = "first-clone";
-    lastClone.id = "last-clone";
+    // firstClone.id = "first-clone";
+    // lastClone.id = "last-clone";
 
-    carousel.append(firstClone);
-    carousel.prepend(lastClone);
+    // carousel.append(firstClone);
+    // carousel.prepend(lastClone);
 
     // const slideWidth = slide[index].clientWidth;
 
