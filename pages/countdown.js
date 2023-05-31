@@ -2,14 +2,9 @@ import { useEffect } from "react";
 
 export default function Countdown() {
   useEffect(() => {
-    let days;
-    let hours;
-    let mins;
-    let sec;
+    let days, hours, mins, sec;
 
-    let hoursNow;
-    let minsNow;
-    let secNow;
+    let hoursNow, minsNow, secNow;
 
     const pad2Digit = function (num) {
       return num.toString().padStart(2, "0");
