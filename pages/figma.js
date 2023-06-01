@@ -40,10 +40,10 @@ export default function Figma() {
       btn.addEventListener("click", () => {
         // let scrollWidth = (carousel.scrollLeft +=
         //   btn.id === "left" ? -340 : 340);
-        // goToSlide(scrollWidth);
+        // goToSlide(scrollWidth);]
 
         carousel.scrollLeft += btn.id === "left" ? -340 : 340;
-        getClonesWidth();
+
         // console.log(btn.id);
       });
     });
