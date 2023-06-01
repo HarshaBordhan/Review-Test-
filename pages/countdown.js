@@ -70,6 +70,11 @@ export default function Countdown() {
 
     const interval = setInterval(updateTime, 1000);
 
+    // Spread operator
+    const nums = [1, 2, 3, 4, 5];
+
+    console.log(...nums);
+
     return () => {
       clearInterval(interval);
     };
