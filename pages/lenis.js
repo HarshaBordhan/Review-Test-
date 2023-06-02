@@ -1,4 +1,15 @@
+import { useEffect } from "react";
+
 export default function Lenis() {
+  useEffect(() => {
+    // Spread operator
+    const nums = [1, 2, 3, 4, 5];
+
+    return () => {
+      console.log(...nums);
+    };
+  });
+
   return (
     <>
       <div>Auto Scroll</div>
