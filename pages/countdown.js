@@ -11,7 +11,7 @@ export default function Countdown() {
     };
 
     const updateTime = function () {
-      const dest = new Date("June 28, 2023 10:15:00").getTime();
+      const dest = new Date("June 26, 2023 22:05:00").getTime();
       const now = new Date().getTime();
 
       const diff = dest - now;
@@ -50,10 +50,12 @@ export default function Countdown() {
         document.querySelector(".mins").innerText = "00" + "m";
         document.querySelector(".secs").innerText = "00" + "s";
       }
+    };
 
+    const updateCurrentTime = function () {
       // DATES AND TIMES now
-
       const nowTime = new Date();
+
       secNow = nowTime.getSeconds();
       minsNow = nowTime.getMinutes();
       hoursNow = nowTime.getHours();
@@ -69,6 +71,7 @@ export default function Countdown() {
     };
 
     const interval = setInterval(updateTime, 1000);
+    const interval2 = setInterval(updateCurrentTime, 1000);
 
     return () => {
       clearInterval(interval);
