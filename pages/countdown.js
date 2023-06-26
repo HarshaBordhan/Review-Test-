@@ -11,7 +11,7 @@ export default function Countdown() {
     };
 
     const updateTime = function () {
-      const dest = new Date("June 26, 2023 22:05:00").getTime();
+      const dest = new Date("June 28, 2023 22:05:00").getTime();
       const now = new Date().getTime();
 
       const diff = dest - now;
