@@ -1,4 +1,5 @@
 import Main from "@/components/Figma/main";
+import Link from "next/link";
 
 export default function Test() {
   return (
