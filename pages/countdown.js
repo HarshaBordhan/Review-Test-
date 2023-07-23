@@ -100,3 +100,11 @@ export default function Countdown() {
     </>
   );
 }
+
+// cloned-memberships
+// <!-- REPLACE↓-->
+
+// <!-- Memberstack webflow package -->
+//   <script data-memberstack-app="app_cl79ccxwy00a10ufn74rx1319" src="https://static.memberstack.com/scripts/v1/memberstack.js" type="text/javascript"></script>
+
+// <!-- REPLACE↑ -->
